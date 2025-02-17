@@ -1,0 +1,3 @@
+to convert favicon images to .ico:-https://www.icoconverter.com/
+to get images:- https://pngimg.com/
+to get icons for the header:-https://react-icons.github.io/react-icons/
