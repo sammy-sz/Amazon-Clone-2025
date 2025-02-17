@@ -107,7 +107,7 @@
 .delivery:hover,
 .logo_container a :hover,
 
-.lower_container ul li :hover {
+.lower_container ul :hover {
   border: 1px solid white;
   border-radius: 3px;
 }
