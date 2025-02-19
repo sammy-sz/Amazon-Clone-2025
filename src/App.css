@@ -1,10 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: sans-serif, 'Amazon Ember';
+    
 }
 
-.root{
+:root{
     --primary-color: #febd69;
     --primary-shade: #d49644;
 }
