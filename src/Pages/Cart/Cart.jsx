@@ -1,16 +1,18 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import LayOut from "../../Components/LayOut/LayOut";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
 import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
-import {Link} from 'react-router-dom'
-import styles from './Cart.module.css'
+import { Link } from "react-router-dom";
+import styles from "./Cart.module.css";
 
 const Cart = () => {
   const [{ basket, user }, dispatch] = useContext(DataContext);
-  const total =basket.reduce((amount,item)=>{
-    return item.price+amount
-  },0)
+  const total = basket.reduce((amount, item) => {
+    return item.price * item.amount + amount;
+  }, 0);
+  console.log(basket);
+
   return (
     <LayOut>
       <section className={styles.container}>
@@ -18,10 +20,10 @@ const Cart = () => {
           <h2>Hello</h2>
           <h3>Your shopping basket</h3>
           <hr />
-          {
-          basket?.length == 0 ? (<p>Opps! No item in your cart</p>) : (
+          {basket?.length == 0 ? (
+            <p>Opps! No item in your cart</p>
+          ) : (
             basket?.map((item, i) => (
-           
               <ProductCard
                 key={i}
                 product={item}
@@ -30,14 +32,13 @@ const Cart = () => {
                 flex={true}
               />
             ))
-          )
-          }
+          )}
         </div>
-        {basket?.length !==0&&(
+        {basket?.length !== 0 && (
           <div className={styles.subtotal}>
             <div>
               <p>Subtotal({basket?.length}items)</p>
-              <CurrencyFormat amount={total}/>
+              <CurrencyFormat amount={total} />
             </div>
             <span>
               <input type="checkbox" />
@@ -46,8 +47,6 @@ const Cart = () => {
             <Link to="/payments">Continue to checkout</Link>
           </div>
         )}
-       
-        
       </section>
     </LayOut>
   );
