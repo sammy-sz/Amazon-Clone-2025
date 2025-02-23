@@ -4,7 +4,7 @@ import Landing from './Landing/Landing'
 import Payment from '../Pages/Payment/Payment'
 import Orders from '../Pages/Orders/Orders'
 import Cart from '../Pages/Cart/Cart'
-import SignIn from '../Pages/Auth/SignUp'
+import Auth from '../Pages/Auth/Auth'
 import Results from './Results/Results'
 import ProductDetail from './ProductDetail/ProductDetail'
 
@@ -13,7 +13,7 @@ const Routing = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/auth" element={<SignIn />} />
+        <Route path="/auth" element={<Auth />} />
         <Route path="/payments" element={<Payment />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/category/:categoryName" element={<Results />} />
