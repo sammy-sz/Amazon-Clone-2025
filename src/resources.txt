@@ -4,3 +4,4 @@ to get icons for the header:-https://react-icons.github.io/react-icons/
 to get fake API products, carts, and users in JSON format:- https://fakestoreapi.com/docs
 to get rating:- https://mui.com/material-ui/getting-started/installation/
 to get numerals:- https://www.npmjs.com/package/numeral
+to get the online payment gateway:https://stripe.com/gb
