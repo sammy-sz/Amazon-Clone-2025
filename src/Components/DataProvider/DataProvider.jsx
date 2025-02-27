@@ -3,7 +3,9 @@ import { initialState, reducer } from "../../Utility/reducer";
 
 
 export const DataContext=createContext()
-
+export const Type = {
+  SET_USER: "SET_USER",
+};
 
 export const DataProvider = ({ children, reducer, initialState }) => {
   return (
