@@ -12,16 +12,18 @@ const Cart = () => {
     return item.price * item.amount + amount;
   }, 0);
   // console.log(basket);
-  const increment = (item)=>{
+  const increment = (item) => {
     dispatch({
-      type:Type.ADD_TO_BASKET, item
-    })
-  }
-  const decrement =(id)=>{
+      type: Type.ADD_TO_BASKET,
+      item,
+    });
+  };
+  const decrement = (id) => {
     dispatch({
-      type:Type.REMOVE_FROM_BASKET, id
-    })
-  }
+      type: Type.REMOVE_FROM_BASKET,
+      id,
+    });
+  };
   return (
     <LayOut>
       <section className={styles.container}>
