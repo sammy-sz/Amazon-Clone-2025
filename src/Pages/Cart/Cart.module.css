@@ -25,6 +25,9 @@
   background-color: #fff;
   border: none;
 }
+.btn:hover svg{
+  background-color: var(--primary-color);
+}
 .container div:not(.subtotal){
   height: auto !important;
 }

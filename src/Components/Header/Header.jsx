@@ -10,9 +10,9 @@ import { auth } from "../../Utility/firebase";
 
 const Header = () => {
   const [{ user, basket }, dispatch] = useContext(DataContext);
-  const totalItem = basket?.reduce((amount, item)=>{
-    return item.amount + amount
-  }, 0)
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
   // console.log(basket.length);
   return (
     <section className={styles.fixed}>
@@ -65,11 +65,12 @@ const Header = () => {
                 {user ? (
                   <>
                     <p>Hello {user?.email?.split("@")[0]}</p>
-                    <span onClick={()=>auth.signOut()}>Sign Out</span>
+                    <span onClick={() => auth.signOut()}>Sign Out</span>
                   </>
                 ) : (
                   <>
-                    <p>Hello, sign In</p>                <span>Account & Lists</span>
+                    <p>Hello, sign In</p>
+                    <span>Account & Lists</span>
                   </>
                 )}
               </div>
@@ -84,7 +85,7 @@ const Header = () => {
             {/* cart */}
             <Link to="/cart" className={styles.cart}>
               <BiCart size={35} />
-              <span>{basket.length}</span>
+              <span>{totalItem}</span>
             </Link>
           </div>
         </div>

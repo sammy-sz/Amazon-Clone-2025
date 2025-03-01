@@ -6,6 +6,8 @@ import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
 import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 import { Type } from "../../Utility/action.type";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 const Cart = () => {
   const [{ basket, user }, dispatch] = useContext(DataContext);
   const total = basket.reduce((amount, item) => {
@@ -48,14 +50,14 @@ const Cart = () => {
                     className={styles.btn}
                     onClick={() => increment(item)}
                   >
-                    +
+                    <IoIosArrowUp size={15} />
                   </button>
                   <span>{item.amount}</span>
                   <button
                     className={styles.btn}
                     onClick={() => decrement(item.id)}
                   >
-                    -
+                    <IoIosArrowDown size={15} />
                   </button>
                 </div>
               </section>
