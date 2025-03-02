@@ -22,6 +22,7 @@ const Auth = () => {
   const [{ user }, dispatch] = useContext(DataContext);
   // console.log(user);
   const navigate =useNavigate()
+  
   const authHandler = async (e) => {
     e.preventDefault();
     console.log(e.target.name);
