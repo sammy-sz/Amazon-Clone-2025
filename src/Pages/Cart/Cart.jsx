@@ -34,7 +34,7 @@ const Cart = () => {
           <h3>Your shopping basket</h3>
           <hr />
           {basket?.length == 0 ? (
-            <p>Opps! No item in your cart</p>
+            <p> Opps! No item in your cart</p>
           ) : (
             basket?.map((item, i) => (
               <section className={styles.cart_product}>
