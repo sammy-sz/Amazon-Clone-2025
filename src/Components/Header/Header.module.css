@@ -1,4 +1,4 @@
-.fixed{
+.fixed {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -51,6 +51,7 @@
 }
 .search select {
   border: none;
+  padding-block: 11px;
 }
 .search input {
   border: 1px solid white;
@@ -102,7 +103,7 @@
 .cart span {
   position: absolute;
   font-weight: bold;
-  top: -6px;
+  top: 2px;
   font-style: 20px;
   background-color: #1a1a1a;
   left: 14px;
@@ -111,7 +112,6 @@
 .order_container a:hover,
 .delivery:hover,
 .logo_container a :hover,
-
 .lower_container ul :hover {
   border: 1px solid white;
   border-radius: 3px;
@@ -135,7 +135,7 @@
   gap: 3.5px;
   align-items: center;
 }
- /* .lower_container ul li :hover{
+/* .lower_container ul li :hover{
   border: 1px solid white;
   border-radius: 3px;
 } */
